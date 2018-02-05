@@ -1,0 +1,29 @@
+-pip install Django==1.11.9 {
+	-by specifying which version of Django you want installed, pip will look to install that specific version
+	-if the package already exists, pip will uninstall the version you have to install the version you requested
+}
+
+-pip list {
+	-running this command will display all the packages that are installed so far
+	-the equivalent of running 'dir' to find the files in that directory 
+}
+-pip install Django==1.11.9{
+	-if you request to install a version that already exists, it will find it and tell you it already exists
+}
+-pip freeze {
+	-this tells you what version of each package you have installed
+	-the difference between freeze and list is: list tells you what packages you have, freeze tells you what version they are running
+}
+-pip freeze > requirements {
+	-this generated a file called "requirements" 
+}
+-uninstall Django {
+	-this uninstalled every single file related to Django in the python packages
+}
+-pip show Django {
+	-this did not return anything since Django was uninstalled completely
+	-normally would return the info about a specific installed package
+}
+-pip search {
+	-this searches all packages for anything with the name or description you search
+}
