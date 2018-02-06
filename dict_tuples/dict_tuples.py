@@ -4,4 +4,6 @@ my_dict = {
   "Michael": "(999) 999-9999",
   "Jay": "(777) 777-7777"
 }
-print my_dict.items()
+x=  my_dict.items()
+#This next line is to check weather it is a tuple by returning true or false
+print isinstance(x[0],tuple)
