@@ -7,7 +7,7 @@ def odd_even():
 			odd = "This number is even"
 		else:
 			odd = "This number is odd"
-		print num, i, odd
+		print num, str(i)+".", odd
 odd_even()
 #multiply each value in a given list by the given number (5)
 def multiply(a, by):
