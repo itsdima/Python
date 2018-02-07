@@ -21,8 +21,13 @@ Lexus = car(40000, 175, "full", 28)
 Lada = car(500, 40, "empty", 30)
 BRZ = car(20000, 120, "full", 30)
 BMW.carInfo()
+print "\n"
 Infiniti.carInfo()
+print "\n"
 AMG.carInfo()
+print "\n"
 Lexus.carInfo()
+print "\n"
 Lada.carInfo()
+print "\n"
 BRZ.carInfo()
