@@ -12,14 +12,14 @@ class animal(object):
 		print self.name, self.health
 		return self 
 class Dog(animal):
-	def __init__(self, name, health = 150):
-		super(Dog, self).__init__(name, health)
+	def __init__(self, name):
+		super(Dog, self).__init__(name, 150)
 	def pet(self):
 		self.health += 5
 		return self
 class Dragon(animal):
-	def __init__(self, name, health = 170):
-		super(Dragon, self).__init__(name, health)
+	def __init__(self, name):
+		super(Dragon, self).__init__(name, 170)
 	def fly(self):
 		self.health -= 10
 		return self
