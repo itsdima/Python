@@ -18,14 +18,21 @@ Eric = patients(2, "Eric", "Seasonal")
 class hospital(object):
 	def __init__(self):
 		self.patients = []
+		self.beds = []
 		self.hospitalname = "EverGreen"
 		self.capacity = 3
+		for i in range(0, self.capacity):
+			self.beds.append(False)
 	def admit(self, person):
 		if self.capacity < 1:
 			print person.name, "Sorry about that, our Hospital is full, get sick some other time"
 		elif person not in self.patients:
 			self.patients.append(person)
-			person.assign(self.capacity)
+			for i in range(0, len(self.beds)):
+				if self.beds[i] == False:
+					person.assign(i)
+					self.beds[i]= True
+					break
 			self.capacity -= 1
 			print person.name, "You have been admitted into our Hospital" 
 		else: 
@@ -34,7 +41,7 @@ class hospital(object):
 	def discharge(self, person):
 		if person in self.patients:
 			self.patients.remove(person)
-			person.assign(None)
+			self.beds[person.bed] = False
 			self.capacity += 1
 			print "Bye-Bye, glad you feel beter", person.name
 		else:
